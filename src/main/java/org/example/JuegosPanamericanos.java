@@ -98,7 +98,7 @@ public class JuegosPanamericanos {
 
 	//metodo menu
 
-	public
+	public menu
 
 
 }

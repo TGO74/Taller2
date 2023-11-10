@@ -139,3 +139,9 @@ Relaciones:
   -Un atleta puede o no pertenecer a un equipo
   -Un evento está relacionado con una disciplina (la disciplina puede existir sin el evento, pero el evento no puede existir sin la disciplina)
   -Un evento esta relacionado con atletas o equipos (Si el evento se eliminara también se eliminaría esta relación)
+
+
+Prompt a ChatGPT para hacer pruebas:
+crea los objetos y listas necesarias para hacer las siguientes pruebas en una clase ejecutable llamada Pruebas:  añadir atletas, equipos y eventos a los juegos panamericanos.
+añadir algunos atletas a dsiciplinas y equios
+mostrar la info de atletas, disciplinas, equipos y eventos
