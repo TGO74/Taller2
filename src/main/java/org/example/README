@@ -1,0 +1,141 @@
+TAllER 2
+
+"Sistema de clasificación de atletas Juegos Panamericanos"
+
+Clase JuegosPanamericanos:
+
+    Atributos:
+
+    -listaAtletas : ArrayList<Atleta>
+    -listaDisciplinas : ArrayList<Disciplina>
+    -listaEquipos : ArrayList<Equipo>
+    -listaEventos : ArrayList<Evento>
+
+    Métodos:
+
+    +JuegosPanamericanos()                                                          //constructor
+    +getListaAtletas()                                                              //getters y setters
+    +getListaDisciplinas()
+    +getListaEquipos()
+    +getListaEventos()
+    +setListaAtletas()
+    +setListaDisciplinas()
+    +setListaEquipos()
+    +setListaEventos()
+    +agregarAtleta()                                                                //agregar un atleta a la lista de atletas
+    +eliminarAtleta()                                                               //eliminar un atleta de la lista de atletas
+    +agregarDisciplina()                                                            //agregar una disciplina a la lista de disciplinas
+    +eliminarDisciplina()                                                           //eliminar una disciplina de la lista de disciplinas
+    +agregarEquipo()                                                                //agregar un equipo a la lista de equipos
+    +eliminarEquipo()                                                               //eliminar un equipo de la lista de equipos
+    +agregarEvento()                                                                //agregar un evento a la lista de eventos
+    +eliminarEvento()                                                               //eliminar un evento de la lista de eventos
+
+Clase Atleta:
+
+    Atributos:
+
+    -nombreAtleta : String
+    -apellidoAtleta : String
+    -edad : int
+    -pais : String
+    -listaDisciplinasAtleta : ArrayList<Disciplina>
+
+    Métodos:
+
+    +Atleta(nombreAtleta, apellidoAtleta, edad, pais)     //constructor
+    +getNombreAtleta()                                    //getters y setters
+    +getApellidoAtleta()
+    +getEdad()
+    +getPais()
+    +getListaDisciplinasAtleta()
+    +setNombreAtleta()
+    +setApellidoAtleta()
+    +setEdad()
+    +setPais()
+    +setListaDisciplinasAtleta()
+    +agregarDisciplinaAtleta()                           //agregar una disciplina a la lista de disciplinas del atleta
+    +eliminarDisciplinaAtleta()                          //eliminar una disciplina de la lista de disciplinas del atleta
+    +toString()                                         //método toString() para imprimir los datos del atleta
+
+
+Clase Disciplina:
+
+     Atributos:
+
+     -nombreDisciplina : String
+     -numeroDeParticipantes : int
+     -recordMundial : double
+     -tipoDeDisciplina: String                        //individual o por equipos
+
+     Métodos:
+
+        +Disciplina(nombreDisciplina, numeroDeParticipantes, recordMundial, tipoDeDisciplina, listaAtletas, listaEquipos) //constructor
+        +getNombreDisciplina()   //getters y setters
+        +getNumeroDeParticipantes()
+        +getRecordMundial()
+        +getTipoDeDisciplina()
+
+        +setNombreDisciplina()
+        +setNumeroDeParticipantes()
+        +setRecordMundial()
+        +setTipoDeDisciplina()
+
+        +toString()
+
+Clase Equipo:
+
+        Atributos:
+
+        -nombreEquipo : String
+        -listaAtletasEquipo : ArrayList<Atleta>
+        -disciplinaEquipo : Disciplina
+
+       Métodos:
+
+           +Equipo(nombreEquipo, disciplinaEquipo) //constructor
+            +getNombreEquipo()                     //getters y setters
+            +getListaAtletasEquipo()
+            +setNombreEquipo()
+            +setListaAtletasEquipo()
+            +agregarAtletaEquipo()                //agregar un atleta a la lista de atletas del equipo
+            +eliminarAtletaEquipo()               //eliminar un atleta de la lista de atletas del equipo
+            +toString()                           //método toString() para imprimir los datos del equipo
+
+Clase Evento:
+
+        Atributos:
+
+        -nombreEvento : string
+        -disciplinaEvento : Disciplina
+        -fechaEvento : Date
+        -listaEquiposEvento : ArrayList<Equipo> (si es por equipos)
+        -listaAtletasEvento : ArrayList<Atleta> (si es individual)
+
+        Métodos:
+
+        +Evento(nombreEvento, disciplinaEvento, fechaEvento))      //constructor
+            +getNombreEvento()                                     //getters y setters
+            +getDisciplinaEvento()
+            +getFechaEvento()
+            +getListaEquiposEvento()
+            +getListaAtletasEvento()
+            +setNombreEvento()
+            +setDisciplinaEvento()
+            +setFechaEvento()
+            +setListaEquiposEvento()
+            +setListaAtletasEvento()
+            +agregarEquipoEvento()                                 //agregar un equipo a la lista de equipos del evento
+            +eliminarEquipoEvento()                                //eliminar un equipo de la lista de equipos del evento
+            +agregarAtletaEvento()                                 //agregar un atleta a la lista de atletas del evento
+            +eliminarAtletaEvento()                                //eliminar un atleta de la lista de atletas del evento
+            +toString()                                            //método toString() para imprimir los datos del evento
+
+
+Relaciones:
+
+  -Un atleta puede participar en varias disciplinas
+  -Una disciplina puede tener varios atletas
+  -Un atleta puede o no pertenecer a un equipo
+  -Un evento está relacionado con una disciplina (la disciplina puede existir sin el evento, pero el evento no puede existir sin la disciplina)
+  -Un evento esta relacionado con atletas o equipos (Si el evento se eliminara también se eliminaría esta relación)
